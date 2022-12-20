@@ -1,0 +1,40 @@
+lua-discount (2.1.8-deepin1) unstable; urgency=medium
+
+  * update version
+  * skip test
+
+ -- Deepin Packages Builder <packages@deepin.org>  Mon, 21 Nov 2022 13:41:33 +0800
+
+lua-discount (2.1.8-3) unstable; urgency=medium
+
+  * Fix test failure, thanks to Reiner Herrmann (Closes: #852901)
+
+ -- Julian Wollrath <jwollrath@web.de>  Sun, 05 Feb 2017 19:04:50 +0100
+
+lua-discount (2.1.8-2) unstable; urgency=medium
+
+  * Build-depend on discount >= 2.2.0+git20160802 (Closes: #824944)
+
+ -- Enrico Tassi <gareuselesinge@debian.org>  Fri, 05 Aug 2016 11:34:21 +0200
+
+lua-discount (2.1.8-1) unstable; urgency=medium
+
+  * New upstream snapshot.
+  * Fix failing test (Closes: #824944).
+  * Bump standards version to 3.9.8 (no changes necessary).
+
+ -- Julian Wollrath <jwollrath@web.de>  Sun, 12 Jul 2015 18:11:03 +0200
+
+lua-discount (1.2.10.1-2) unstable; urgency=medium
+
+  * Update VCS-URLs.
+  * Bump standards version to 3.9.6 (no changes necessary).
+  * Make the tests work with luaunit 3.1 (Closes: #789978).
+
+ -- Julian Wollrath <jwollrath@web.de>  Thu, 25 Jun 2015 23:38:29 +0200
+
+lua-discount (1.2.10.1-1) unstable; urgency=low
+
+  * Initial release. (Closes: #700783)
+
+ -- Julian Wollrath <jwollrath@web.de>  Sun, 17 Feb 2013 14:57:18 +0100

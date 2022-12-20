@@ -1,0 +1,17 @@
+Author: Reiner Herrmann <reiner@reiner-h.de>
+Description: Fix test failure with discount >= 2.2.2
+ Since version 2.2.2 discount generates anchor names with - instead of .
+ for spaces.
+Bug-Debian: https://bugs.debian.org/852901
+
+--- a/test_discount.lua
++++ b/test_discount.lua
+@@ -40,7 +40,7 @@
+ --end
+ 
+ function test_toc()
+-  local expected_out = '<a name="Level.1\"></a>\n<h1>Level 1</h1>\n\n<a name="Level.2\"></a>\n<h2>Level 2</h2>'
++  local expected_out = '<a name="Level-1\"></a>\n<h1>Level 1</h1>\n\n<a name="Level-2\"></a>\n<h2>Level 2</h2>'
+   local input = "# Level 1\n\n## Level 2\n\n"
+   luaunit.assertEquals(expected_out, discount(input, "toc"))
+ end

@@ -1,0 +1,35 @@
+Source: lua-discount
+Section: interpreters
+Priority: optional
+Maintainer: Julian Wollrath <jwollrath@web.de>
+Uploaders: Enrico Tassi <gareuselesinge@debian.org>
+Build-Depends: debhelper (>= 9), dh-lua, libmarkdown2-dev (>= 2.2.0+git20160802), lua-unit
+Standards-Version: 3.9.6
+Vcs-Git: https://anonscm.debian.org/git/pkg-lua/lua-discount.git
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-lua/lua-discount.git
+Homepage: http://asbradbury.org/projects/lua-discount/
+
+Package: lua-discount
+Architecture: any
+Section: libdevel
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Pre-Depends: ${misc:Pre-Depends}
+Provides: ${lua:Provides}
+Multi-Arch: same
+XB-Lua-Versions: ${lua:Versions}
+Description: Discount library for the Lua language
+ A binding to Discount, a fast C implementation of the Markdown text to HTML
+ markup system which passes the Markdown testsuite.
+
+Package: lua-discount-dev
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}, lua-discount (= ${binary:Version})
+Pre-Depends: ${misc:Pre-Depends}
+Provides: ${lua:Provides}
+Multi-Arch: same
+XB-Lua-Versions: ${lua:Versions}
+Description: discount development files for the Lua language
+ This package contains the development files of the discount library,
+ useful to create a statically linked binary (like a C application or a
+ standalone Lua interpreter).
+ Documentation is also shipped within this package.
